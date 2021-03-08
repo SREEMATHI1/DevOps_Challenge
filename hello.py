@@ -34,6 +34,10 @@ def hello():
     return jsonify({'test':'i am learning flask'})
 
 
+@app.route('/test')
+def test():
+    return "Works!"
+
 @app.route('/secret')
 def secret():
     
