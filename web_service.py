@@ -29,10 +29,6 @@ client = boto3.resource('dynamodb',
                       )
 table = client.Table(environ.get('USERS_TABLE'))
 
-@app.route('/hello')
-def hello():
-    return jsonify({'test':'i am learning flask'})
-
 
 @app.route('/test')
 def test():
@@ -45,25 +41,11 @@ def secret():
         KeyConditionExpression=Key('code_name').eq('thedoctor')
     )
     return json.dumps((response.get('Items')), indent=4, cls=DecimalEncoder)
-   
-    """resp = client.get_item(
-        TableName=USERS_TABLE,
-        Key={
-            'code_name': {'S': 'thedoctor'}
-        }
-    )
-    item = resp.get('Item')
-    # create a response
-    response = {
-        "statusCode": 200,
-        "body": json.dumps(item)
-    }
-    return response"""
 
 
 @app.route('/health')
 def health():
-    return jsonify({'status': 'healthy', 'container': '< LINK_TO_HUB >' , 'project': 'github.com/omerxx/ecscale' })
+    return jsonify({'status': 'healthy', 'container': 'https://hub.docker.com/r/sreemaish/python-dynamo-webservice', 'project': 'https://github.com/SREEMATHI1/python-dynamo-sample'})
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True, host='0.0.0.0')
