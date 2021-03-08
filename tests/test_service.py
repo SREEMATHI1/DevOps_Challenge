@@ -1,6 +1,6 @@
 import unittest
-import hello
+import web_service
 from flask import json
 
 def test_test():
-    assert hello.test() == "Works!"
+    assert web_service.test() == "Works!"
