@@ -2,24 +2,18 @@
 
 2.Wrote an application in Flask framework using Python.
 
-#Importing the packages required for the application
-*from flask import Flask, jsonify, json
-from os import environ, path
-from dotenv import load_dotenv
-import boto3
-from boto3.dynamodb.conditions import Key* 
-
-#Created requirements.txt file.
-#Wrote helper class to convert a DynamoDB item to JSON
-#Setting up the environment path.
-#Writing code to check the health status of the container 
-#Wrote minimal testcase to test the application
+  #Importing the packages required for the application 
+  #Created requirements.txt file.
+  #Wrote helper class to convert a DynamoDB item to JSON
+  #Setting up the environment path.
+  #Writing code to check the health status of the container 
+  #Wrote minimal testcase to test the application
 
 3.Tested the application locally
 
 4.Containerizing the application using Docker
 
-#Written Dockerfile for containerization.
+  #Written Dockerfile for containerization.
 
 5. Used Docker-compose by creating docker-compose.yml file
 
