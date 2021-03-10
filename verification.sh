@@ -9,6 +9,5 @@ curl 127.0.0.1:5000/secret | jq '.secret_code'
 curl 127.0.0.1:5000/health | jq '.'
 
 
-sleep 100
 # Destroy 
 docker-compose down
